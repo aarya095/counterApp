@@ -10,11 +10,11 @@ public class CounterUI extends JFrame{ //handles the user interface and event ha
 	
 	private JLabel label;
 	private JButton button;
-	private CounterLogic logic;
+	private CounterLogic logic; //creates an instance of class CounterLogic
 	
 	public CounterUI() {
 		
-		logic = new CounterLogic();
+		logic = new CounterLogic(); // set up CounterLogic instance (i.e creating an object of the parent class)
 		
 		setTitle("Counter App");
 		setSize(300,200);
@@ -31,7 +31,7 @@ public class CounterUI extends JFrame{ //handles the user interface and event ha
 		button.addActionListener(new ActionListener() {
 				
 				public void actionPerformed(ActionEvent e) {
-			logic.increment();
+			logic.increment(); //
 			label.setText("Count: "+logic.getCount());
 		}
 		}
@@ -43,9 +43,9 @@ public class CounterUI extends JFrame{ //handles the user interface and event ha
 		// TODO Auto-generated method stub
 		SwingUtilities.invokeLater(new Runnable() {
 			
-			public void run() {
-				
-				CounterUI ui = new CounterUI();
+			public void run() { // run() is a method of Runnable interface
+ 				
+				CounterUI ui = new CounterUI(); //initializes the UI components in constructor CounterUI
 				ui.setVisible(true);
 				
 			}

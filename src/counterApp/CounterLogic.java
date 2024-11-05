@@ -2,7 +2,7 @@ package counterApp;
 
 public class CounterLogic { //deals with the logic
 	
-	private int count = 0;
+	private int count = 0; // initialized count = 0
 	
 	public int getCount () {
 		return count;
